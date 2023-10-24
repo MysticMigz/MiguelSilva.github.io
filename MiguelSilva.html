@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All You Need to Know About Me</title>
+    <link rel="stylesheet" href="C:\Users\migue\OneDrive\Desktop\Computer Science Course\YEAR 2\Advanced Client Side Development\Portfolio Project\HomePageCSS.css"> 
+</head>
+<body>
+    <!-- Main Page -->
+    <header>
+        <h1>Welcome to my Page</h1>
+        <nav>
+            <ul>
+                <li><a href="w1945895 WEBPAGE PORTFOLIO.html">Home</a></li>
+                <li><a href="AboutMePage.html">About</a></li>
+                <li><a href="blogpage.html">Blog</a></li>
+                <li><a href="contactform.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <!-- Side Information (Twitter Feed or Social Media Links) 
+        <aside>
+            <p>
+                <a href="https://www.instagram.com/miguelsilva5088/0-">Instagram</a>
+                <img src="C:\Users\migue\OneDrive\Desktop\Computer Science Course\YEAR 2\Advanced Client Side Development\Portfolio Project\Instagram Logo.jpg">
+            </p>    
+        </aside>
+                        -->
+
+    <script>
+        // Get all the tabs and content areas
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.content');
+
+        // Add event listeners to the tabs
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove the 'active' class from all tabs and hide all content areas
+                tabs.forEach(tab => tab.classList.remove('active'));
+                contents.forEach(content => content.style.display = 'none');
+
+                // Add the 'active' class to the clicked tab and show the corresponding content area
+                tab.classList.add('active');
+                const contentId = tab.id.replace('tab', 'content');
+                const content = document.getElementById(contentId);
+                content.style.display = 'block';
+            });
+        });
+
+        // Activate the home tab by default
+        document.getElementById('home-tab').click();
+    </script>
+
+</body>
+</html>
