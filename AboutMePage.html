@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="HomePageCSS.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <header>
+        <h1>About Me</h1>
+        <nav>
+            <ul>
+                <li><a href="w1945895 WEBPAGE PORTFOLIO.html">Home</a></li>
+                <li><a href="AboutMePage.html">About</a></li>
+                <li><a href="blogpage.html">Blog</a></li>
+                <li><a href="contactform.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section id="intro">
+            <h2>Some Insight About Me</h2>
+            <p> Hi my names Miguel, I am a dynamic individual whose life is an exhilarating journey filled with a profound love for travel. 
+                My adventurous spirit has taken me to various corners of the world, exploring diverse cultures and landscapes. 
+                Beyond my wanderlust, I am also an avid enthusiast of rock climbing and football, finding solace and exhilaration in the great outdoors. 
+                When I am not scaling walls or cheering on my favorite team, I channel my creative energy into the realm of front-end development, crafting visually appealing and user-friendly digital experiences. 
+                I am confident enough to say that I am visionary at heart. I nurture a deep passion for designing innovative and novel creations, constantly seeking to push the boundaries of my creative capabilities.</p>
+        </section>
+
+        <section id="images">
+            <h2>Photo Gallery</h2>
+            <div class="Container-Gallery">
+                <div class="image">
+                    <img src="image1.jpg" alt="Image 1">
+                </div>
+                <div class="image">
+                    <img src="image2.jpg" alt="Image 2">
+                </div>
+                <div class="image">
+                    <img src="image3.jpg" alt="Image 3">
+                </div>
+            </div>
+        </section>
+
+        <h2>Skills</h2>
+        <section class="progress-container" >
+
+                <div class="progress-bar">CSS - 90%</div>
+            
+            
+            
+                <div class="progress-bar">JavaScript - 80%</div>
+            
+
+            
+                <div class="progress-bar">HTML - 95%</div>
+            
+        </section>
+
+
+    </main>
+    <script>
+        // Get all the tabs and content areas
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.content');
+
+        // Event listeners for the tabs
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove the 'active' class from all tabs and hide all content areas
+                tabs.forEach(tab => tab.classList.remove('active'));
+                contents.forEach(content => content.style.display = 'none');
+
+                // Add the 'active' class to the clicked tab and show the corresponding content area
+                tab.classList.add('active');
+                const contentId = tab.id.replace('tab', 'content');
+                const content = document.getElementById(contentId);
+                content.style.display = 'block';
+            });
+        });
+
+        // Activates the home tab by default
+        document.getElementById('home-tab').click();
+    </script>
+
+
+</body>
+</html>

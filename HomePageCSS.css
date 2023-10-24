@@ -1,0 +1,255 @@
+/* Specify fonts using Google Fonts */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+/* Global styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-image: url(https://img.freepik.com/free-photo/abstract-luxury-gradient-blue-background-smooth-dark-blue-with-black-vignette-studio-banner_1258-72292.jpg?w=1380&t=st=1698157863~exp=1698158463~hmac=f61edc6089bea74639c3988e71111601116f2d2257c5f4312c2eb7e1a7f23723);
+    background-size: cover; /* Adjusts the image size to cover the entire body */
+    background-attachment: fixed; /* Optional - keeps the image fixed while scrolling */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Header styles */
+/* Use of Gradient here */
+header {
+    background: linear-gradient(90deg, #0074D9, #00bc8c);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    background-color: rgba(63, 69, 255, 0.3);
+    overflow: hidden;
+    border-color: black;
+    border: 3px solid black;
+    border-radius: 4px;
+    font-size: 30px;
+    color: white;
+    
+}
+
+/* Animations */
+@keyframes glowing {
+
+    0% {
+        box-shadow: 0 0 5px rgba(187, 9, 9, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(187, 9, 9, 0.9);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(187, 9, 9, 0.2); 
+    }
+}
+
+/* Navigation styles */
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+aside {
+    position: right;
+}
+
+/*------------------------- About Page styles-------------------------- */
+/*Used nth child for*/
+#about {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#progress-container {
+    width: 100%;
+    background-color: #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    
+}
+
+.progress-bar {
+    width: 100%; 
+    background-color: blue;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    margin-bottom: 10px; 
+}
+/*Use of the Nth Pseudo Class*/
+.progress-container :nth-child(1) {
+    width: 90%;
+    background-color: red;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border: solid #000000;
+    border-radius: 10px;
+}
+.progress-container :nth-child(2) {
+    width: 80%;
+    background-color: orange;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border: solid #000000;
+    border-radius: 10px;
+}
+.progress-container :nth-child(3) {
+    width: 95%;
+    background-color: lightskyblue;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+    border: solid #000000;
+    border-radius: 10px;
+}
+
+/*--------------------- Blog Page styles ---------------------*/
+#blog {
+    background-color: rgba(22, 75, 153, 0.7);
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+#blog article {
+    margin-bottom: 20px;
+}
+
+/* Form styles */
+#contact-form {
+    background-color: #fff;
+    padding: 20px;
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Form input styles */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: #0074D9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* Attribute selectors example */
+input[type="text"][required],
+input[type="email"][required] {
+    border-color: #ff4136;
+}
+
+/* Pseudo-elements with generated content */
+article::before {
+    content: "New";
+    display: inline-block;
+    background-color: #00bc8c;
+    color: #fff;
+    padding: 3px 6px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+/* User action pseudo-class */
+nav a:hover {
+    text-decoration: underline;
+    background-color: #0074D9;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e6e200, 0 0 40px #e6e200, 0 0 50px #e6e200, 0 0 60px #e6e200, 0 0 70px #e6e200;
+    animation: glow 10s ease-in-out infinite alternate;
+}
+
+/* Child combinator and structural selectors */
+nav > ul > li:last-child {
+    margin-right: 0;
+}
+
+/* Negation pseudo-class */
+article:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+
+/* Validity pseudo-class (for form elements) */
+input:invalid {
+    border-color: #ff4136;
+}
+
+/* Relational selector */
+label + input {
+    margin-top: 10px;
+}
+
+/* Border and rounded corners */
+#about, #blog, #contact-form {
+    border: 1px solid #000000;
+    border-radius: 5px;
+}
+
+
+
+
+/* Transforms */
+#about {
+    transform: scale(0.95);
+}
+
+/* Transitions */
+input[type="submit"] {
+    transition: background-color 0.3s ease-in-out;
+}
+
+
+
+#blog article {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Specificity example */
+header h1 {
+    font-weight: bold;
+    font-size: 24px;
+    margin: 0;
+}
